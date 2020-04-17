@@ -11,8 +11,19 @@
         - "{{ playbook_dir }}/config.yml"
       tags: ['always']
 
+    - name: Ensure ~/bin directory exists
+      file:
+        path: ~/bin
+        state: directory
+
+    - name: Ensure .~/ssh/config.d directory exists
+      file:
+        path: ~/.ssh/config.d
+        state: directory
+
   roles:
-    - role: elliotweiser.osx-command-line-tools
+    - role: lafarer.osx-defaults
+      tags: ['defaults']
     - role: geerlingguy.mac.homebrew
       tags: ['homebrew']
     - role: geerlingguy.dotfiles

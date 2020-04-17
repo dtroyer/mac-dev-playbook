@@ -1,0 +1,169 @@
+---
+# Default configuration
+
+configure_dotfiles: no
+configure_sudoers: no
+configure_terminal: no
+configure_osx: no
+
+dotfiles_repo: <set-me>
+dotfiles_repo_accept_hostkey: yes
+dotfiles_repo_local_destination: ~/src/dotfiles
+dotfiles_files:
+  - .aliases
+  - .bash_profile
+  - .bashrc
+  - .config/git/ignore
+  - .gitconfig
+  - .gitignore
+  - .git-prompt
+  - .screenrc
+  - .ssh/config.d/common
+  - .vimrc
+  - bin
+
+homebrew_installed_packages:
+  - autoconf
+  - bash-completion
+  - exiftool
+  - gettext
+  - gifsicle
+  - git
+  - gpg
+  - libevent
+  - nmap
+  - qemu
+  - readline
+  - openssl
+  - sqlite
+  - tcpdump
+  - tmux
+  - tree
+  - watch
+  - wget
+
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - firefox
+  - flux
+  - google-chrome
+  # - handbrake
+  - iterm2
+  - keepassx
+  # - slack
+  - sublime-text
+  - vagrant
+  - virtualbox
+
+# See `geerlingguy.mas` role documentation for usage instructions.
+mas_installed_apps: []
+mas_email: ""
+mas_password: ""
+
+osx_script: "~/.osx --no-restart"
+
+# Dock
+dockitems_remove:
+  - Contacts
+  - FaceTime
+  - iBooks
+  - Launchpad
+  - Mail
+  - Maps
+  - Messages
+  - News
+  - Notes
+  - Podcasts
+  - Reminders
+  - TV
+
+dockitems_persist:
+  # - name: Finder
+  #   path: ""
+  #   pos: 1
+  - name: iTerm
+    path: "/Applications/iTerm.app"
+    pos: 2
+  - name: Firefox
+    path: "/Applications/Firefox.app"
+    pos: 3
+  - name: Safari
+    path: "/Applications/Safari.app"
+    pos: 4
+  - name: Thunderbird
+    path: "/Applications/Thunderbird.app"
+    pos: 5
+  - name: Calendar
+    path: "/Applications/Calendar.app"
+    pos: 6
+  - name: Sublime Text
+    path: "/Applications/Sublime Text.app"
+    pos: 7
+  - name: Clementine
+    path: "/Applications/Clementine.app"
+    pos: 8
+  - name: iTunes
+    path: "/Applications/iTunes.app"
+    pos: 9
+  - name: Photos
+    path: "/Applications/Photos.app"
+    pos: 10
+  - name: KeePassX1
+    path: "/Applications/KeePassX1.app"
+    pos: 11
+  # - name: KeePassXC
+  #   path: "/Applications/KeePassXC.app"
+  #   pos: 11
+  - name: System Preferences
+    path: "/Applications/System Preferences.app"
+    pos: 12
+
+# Install packages from other package managers.
+# Note: You are responsible for making sure the required package managers are
+# installed, eg. through homebrew.
+composer_packages: []
+  # - name: drush
+  #   state: present # present/absent, default: present
+  #   version: "^8.1" # default: N/A
+gem_packages: []
+  # - name: bundler
+  #   state: present # present/absent/latest, default: present
+  #   version: "~> 1.15.1" # default: N/A
+npm_packages: []
+  # - name: webpack
+  #   state: present # present/absent/latest, default: present
+  #   version: "^2.6" # default: N/A
+pip_packages: []
+  # - name: mkdocs
+  #   state: present # present/absent/latest, default: present
+  #   version: "0.16.3" # default: N/A
+
+# Glob pattern to ansible task files to run after all other tasks are finished.
+post_provision_tasks: []
+
+
+# Configure iTerm2
+iterm2_defaults:
+  # General -> Closing
+  - name: PromptOnQuit
+    type: bool
+    value: false
+  # Appearance -> Windows
+  - name: UseBorder
+    type: bool
+    value: true
+  # Appearance -> Tabs
+  - name: HideTab
+    type: bool
+    value: false
+  # Pointer -> General
+  - name: ThreeFingerEmulates
+    type: bool
+    value: true
+  - name: FocusFollowsMouse
+    type: bool
+    value: true
