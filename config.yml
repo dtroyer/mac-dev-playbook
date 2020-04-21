@@ -83,3 +83,26 @@ pip_packages: []
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []
+
+
+# Configure iTerm2
+iterm2_defaults:
+  # General -> Closing
+  - name: PromptOnQuit
+    type: bool
+    value: false
+  # Appearance -> Windows
+  - name: UseBorder
+    type: bool
+    value: true
+  # Appearance -> Tabs
+  - name: HideTab
+    type: bool
+    value: false
+  # Pointer -> General
+  - name: ThreeFingerEmulates
+    type: bool
+    value: true
+  - name: FocusFollowsMouse
+    type: bool
+    value: true
