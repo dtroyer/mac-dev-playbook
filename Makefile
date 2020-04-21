@@ -12,6 +12,9 @@ dock:
 homebrew:
 	$(MAKE) all TAGS='--tags homebrew'
 
+ruby:
+	ansible-playbook ruby.yaml -i inventory -K
+
 iterm:
 	ansible-playbook iterm.yaml -i inventory -K
 
@@ -25,4 +28,4 @@ get-collections:
 	ansible-galaxy collection install community.general
 
 get-roles:
-	ansible-galaxy install tkimball83.iterm2
+	ansible-galaxy install rvm.ruby tkimball83.iterm2

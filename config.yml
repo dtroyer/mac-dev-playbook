@@ -5,6 +5,7 @@ configure_dotfiles: no
 configure_sudoers: no
 configure_terminal: no
 configure_osx: no
+configure_dock: yes
 
 dotfiles_repo: <set-me>
 dotfiles_repo_accept_hostkey: yes
@@ -20,21 +21,43 @@ dotfiles_files:
   - .screenrc
   - .ssh/config.d/common
   - .vimrc
-  - bin
+  - bin/2mp3
+  - bin/ddnsupdate
+  - bin/exif-keywords
+  - bin/flushdns
+  - bin/foreach
+  - bin/rvm-activate
+  - bin/sbash
+  - bin/screen-ssh-agent
+  - bin/spine
+  - bin/split-repo.sh
+  - bin/tcmount
 
 homebrew_installed_packages:
   - autoconf
+  - autossh
   - bash-completion
+  - cdrtools
+  - coreutils
+  - dockutil
+  - duplicity
   - exiftool
+  - fping
   - gettext
+  - gh
   - gifsicle
   - git
   - gpg
   - libevent
+  - mosh
+  - mpc
   - nmap
+  - openssl
+  # - packer
+  - python@3.9
   - qemu
   - readline
-  - openssl
+  - rsync
   - sqlite
   - tcpdump
   - tmux
@@ -48,16 +71,30 @@ homebrew_taps:
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
+  - barrier
+  - clementine
+  # - darktable
   - firefox
   - flux
-  - google-chrome
+  # - gimp
+  # - github
+  # - google-chrome
   # - handbrake
+  # - inkscape
   - iterm2
-  - keepassx
+  # - keepassx
+  # - keepassxc
+  # - moneydance
+  # - nextcloud
   # - slack
-  - sublime-text
-  - vagrant
-  - virtualbox
+  # - sublime-text
+  # - thunderbird
+  # - tunnelblick
+  # - vagrant
+  # - vagrant-manager
+  # - virtualbox
+  # - virtualbox-extension-pack
+  - vlc
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
