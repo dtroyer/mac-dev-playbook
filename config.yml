@@ -4,7 +4,7 @@ configure_osx: no
 
 dotfiles_repo: https://gitlab.com/dtroyer/home.git
 dotfiles_repo_accept_hostkey: yes
-dotfiles_repo_local_destination: ~/src/dt-home
+dotfiles_repo_local_destination: ~/src/xr7/dt-home
 dotfiles_files:
   - .aliases
   - .bash_profile
@@ -19,7 +19,9 @@ homebrew_installed_packages:
   # - ansible # Installed via homebrew
   - autoconf
   - bash-completion
+  - coreutils
   - exiftool
+  - fping
   - gettext
   - gifsicle
   - git
@@ -32,6 +34,7 @@ homebrew_installed_packages:
   - openssl
   - sqlite
   - tcpdump
+  - watch
   - wget
 
 homebrew_taps:
