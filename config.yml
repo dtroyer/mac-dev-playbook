@@ -52,6 +52,7 @@ homebrew_cask_apps:
   # - slack
   - sublime-text
   - vagrant
+  - vagrant-manager
   - virtualbox
 
 # See `geerlingguy.mas` role documentation for usage instructions.
