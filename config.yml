@@ -122,6 +122,14 @@ dockitems_persist:
     path: "/Applications/System Preferences.app"
     pos: 12
 
+# Ruby
+ruby_versions:
+  - "2.5.1"
+  - "2.6.3"
+  - "2.7.1"
+  - "2.7.2"
+  # - "3.0.0"
+
 # Install packages from other package managers.
 # Note: You are responsible for making sure the required package managers are
 # installed, eg. through homebrew.
