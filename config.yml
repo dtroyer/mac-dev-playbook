@@ -1,11 +1,11 @@
 ---
-# Default configuration
+# sterling (Mojave)
 
 downloads: ~/.ansible-downloads/
 
 configure_dock: true
 configure_sudoers: false
-configure_dotfiles: false
+configure_dotfiles: true
 configure_terminal: false
 configure_osx: false
 configure_sublime: false
@@ -72,7 +72,7 @@ sudoers_custom_config: ''
 #   # Allow users in admin group to use sudo with no password.
 #   %admin ALL=(ALL) NOPASSWD: ALL
 
-dotfiles_repo: <set-me>
+dotfiles_repo: git.xr7.org:/srv/repo/home.git
 dotfiles_repo_accept_hostkey: yes
 dotfiles_repo_local_destination: ~/src/dotfiles
 dotfiles_files:
@@ -85,19 +85,27 @@ dotfiles_files:
   - .git-prompt
   - .screenrc
   - .ssh/config.d/common
-  # - .ssh/config.d/xr7
+  - .ssh/config.d/seriesumei
+  - .ssh/config.d/tomjs
+  - .ssh/config.d/xr7
   - .vimrc
   - bin/2mp3
   - bin/ddnsupdate
   - bin/exif-keywords
   - bin/flushdns
   - bin/foreach
+  # - bin/git-filter-repo
+  - bin/keez-host
+  # - bin/pdfx
+  # - bin/png2jpg
+  - bin/rax
   - bin/rvm-activate
   - bin/sbash
   - bin/screen-ssh-agent
   - bin/spine
   - bin/split-repo.sh
   - bin/tcmount
+  # - bin/tile-sq
   - lib/Makefile
 
 homebrew_installed_packages:
@@ -134,14 +142,14 @@ homebrew_installed_packages:
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   # - barrier
-  # - darktable
+  - darktable
   - firefox
   - flux
-  # - gimp
-  # - github
+  - gimp
+  - github
   # - google-chrome
   # - handbrake
-  # - inkscape
+  - inkscape
   - iterm2
   - keepassxc
   # - moneydance
@@ -149,11 +157,11 @@ homebrew_cask_apps:
   # - slack
   - strawberry
   - sublime-text
-  # - thunderbird
+  - thunderbird
   # - tunnelblick
-  # - vagrant
-  # - vagrant-manager
-  # - virtualbox
+  - vagrant
+  - vagrant-manager
+  - virtualbox
   # - virtualbox-extension-pack
   - vlc
 
