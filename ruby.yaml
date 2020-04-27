@@ -1,0 +1,13 @@
+---
+
+- name: Configure servers with ruby support for single user
+  hosts: all
+  connection: local
+
+  roles:
+    - { role: rvm.ruby,
+        tags: ruby,
+        rvm1_rubies: ['ruby-2.6.3'],
+        rvm1_install_flags: '--autolibs=enable'
+        # rvm1_user: 'ubuntu'
+      }
