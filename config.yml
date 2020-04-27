@@ -1,13 +1,13 @@
 ---
-# Default configuration
+# brewster configuration
 
-configure_dotfiles: false
+configure_dotfiles: true
 configure_sudoers: false
 configure_terminal: false
 configure_osx: false
 configure_dock: true
 
-dotfiles_repo: <set-me>
+dotfiles_repo: git.xr7.org:/srv/repo/home.git
 dotfiles_repo_accept_hostkey: yes
 dotfiles_repo_local_destination: ~/src/dotfiles
 dotfiles_files:
@@ -20,13 +20,16 @@ dotfiles_files:
   - .git-prompt
   - .screenrc
   - .ssh/config.d/common
-  # - .ssh/config.d/xr7
+  - .ssh/config.d/seriesumei
+  - .ssh/config.d/tomjs
+  - .ssh/config.d/xr7
   - .vimrc
   - bin/2mp3
   - bin/ddnsupdate
   - bin/exif-keywords
   - bin/flushdns
   - bin/foreach
+  - bin/keez-host
   - bin/rvm-activate
   - bin/sbash
   - bin/screen-ssh-agent
@@ -85,16 +88,16 @@ homebrew_cask_apps:
   # - inkscape
   - iterm2
   # - keepassx
-  # - keepassxc
+  - keepassxc
   # - moneydance
-  # - nextcloud
+  - nextcloud
   # - slack
   # - sublime-text
   # - thunderbird
   # - tunnelblick
-  # - vagrant
-  # - vagrant-manager
-  # - virtualbox
+  - vagrant
+  - vagrant-manager
+  - virtualbox
   # - virtualbox-extension-pack
   - vlc
 
@@ -152,8 +155,8 @@ dockitems_persist:
   - name: Photos
     path: "/Applications/Photos.app"
     pos: 10
-  - name: KeePassX1
-    path: "/Applications/KeePassX1.app"
+  - name: KeePassX
+    path: "/Applications/KeePassX.app"
     pos: 11
   # - name: KeePassXC
   #   path: "/Applications/KeePassXC.app"
@@ -237,7 +240,7 @@ Dock_PersistentOthers:                         # Either a plain path string or a
   - /Applications
   - { path: "~/Downloads", type: directory, arrange: 2}
   # - { path: "/Applications/Firefox.app", type: file, arrange: 3}
-Dock_TileSize: 40                                # Dock size
+Dock_TileSize: 32                                # Dock size
 Dock_Magnification: no                          # Dock magnification
 Dock_LargeSize: 128                              # Icon size of magnified Dock items
 Dock_Orientation: "left"                       # Dock orientation: left, bottom, right
