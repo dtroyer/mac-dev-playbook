@@ -4,10 +4,25 @@
   hosts: all
   connection: local
 
+  pre_tasks:
+    - include_vars: "{{ item }}"
+      with_fileglob:
+        - "{{ playbook_dir }}/config.yml"
+      tags: ['always']
+
   roles:
-    - { role: rvm.ruby,
-        tags: ruby,
-        rvm1_rubies: ['ruby-2.6.3'],
-        rvm1_install_flags: '--autolibs=enable'
-        # rvm1_user: 'ubuntu'
-      }
+    - role: rvm.ruby
+      tags: ['ruby']
+      rvm1_rubies: "{{ ruby_versions }}"
+      rvm1_install_flags: '--autolibs=enable --user-install'
+      rvm1_user: "{{ ansible_env.USER }}"
+
+  tasks:
+    - name: Install more Ruby gems
+      gem:
+        name: "{{ item.name | default(item) }}"
+        state: "{{ item.state | default('present') }}"
+        version: "{{ item.version | default(omit) }}"
+        user_install: no
+        executable: "{{ item.executable | default(omit) }}"
+      with_items: "{{ gem_packages }}"
