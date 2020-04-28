@@ -62,6 +62,12 @@ mas_password: ""
 
 osx_script: "~/.osx --no-restart"
 
+# Ruby
+ruby_versions:
+  - "2.5.1"
+  - "2.6.3"
+  - "2.7.0"
+
 # Install packages from other package managers.
 # Note: You are responsible for making sure the required package managers are
 # installed, eg. through homebrew.
@@ -69,10 +75,13 @@ composer_packages: []
   # - name: drush
   #   state: present # present/absent, default: present
   #   version: "^8.1" # default: N/A
-gem_packages: []
+gem_packages:
   # - name: bundler
   #   state: present # present/absent/latest, default: present
   #   version: "~> 1.15.1" # default: N/A
+  - bundler
+  - rake
+  - rubocop
 npm_packages: []
   # - name: webpack
   #   state: present # present/absent/latest, default: present
