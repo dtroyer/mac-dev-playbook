@@ -19,6 +19,7 @@ homebrew_installed_packages:
   # - ansible # Installed via homebrew
   - autoconf
   - bash-completion
+  - cdrtools
   - coreutils
   - exiftool
   - fping
@@ -29,6 +30,7 @@ homebrew_installed_packages:
   - gpg
   - libevent
   - nmap
+  - packer
   - qemu
   - readline
   - openssl
