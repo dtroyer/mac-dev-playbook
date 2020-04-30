@@ -16,8 +16,14 @@ dotfiles_files:
   - .gitconfig
   - .gitignore
   # - .osx
+  - .ssh/config.d/common
   - .vimrc
-  - bin
+  - bin/flushdns
+  - bin/foreach
+  - bin/sbash
+  - bin/screen-ssh-agent
+  - bin/spine
+  - bin/tcmount
 
 homebrew_installed_packages:
   # - ansible # Installed via homebrew
