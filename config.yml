@@ -1,15 +1,15 @@
 ---
-# Default configuration
+# Gillette
 
-configure_dotfiles: no
+configure_dotfiles: yes
 configure_sudoers: no
-configure_terminal: no
+configure_terminal: yes
 configure_osx: no
 configure_dock: yes
 
-dotfiles_repo: <set-me>
+dotfiles_repo: git@github.cerner.com:dt081110/homefries.git
 dotfiles_repo_accept_hostkey: yes
-dotfiles_repo_local_destination: ~/src/dotfiles
+dotfiles_repo_local_destination: ~/src/cerner/homefries
 dotfiles_files:
   - .aliases
   - .bash_profile
@@ -19,7 +19,8 @@ dotfiles_files:
   - .git-prompt
   # - .osx
   - .screenrc
-  - .ssh/config.d/common
+  - .ssh/config.d/cerner
+  # - .ssh/config.d/common
   - .vimrc
   - bin/2mp3
   - bin/ddnsupdate
@@ -29,7 +30,7 @@ dotfiles_files:
   - bin/rvm-activate
   - bin/sbash
   - bin/screen-ssh-agent
-  - bin/spine
+  # - bin/spine
   - bin/split-repo.sh
   - bin/tcmount
 
@@ -38,6 +39,7 @@ homebrew_installed_packages:
   - autoconf
   - autossh
   - bash-completion
+  - cdrtools
   - coreutils
   - dockutil
   - duplicity
@@ -52,7 +54,9 @@ homebrew_installed_packages:
   - libevent
   - mpc
   - nmap
+  - packer
   - python@3.9
+  - qemu
   - readline
   - openssl
   - qemu
@@ -71,13 +75,13 @@ homebrew_taps:
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - barrier
-  - clementine
+  # - clementine
   # - darktable
-  # - firefox
+  - firefox
   - flux
-  # - gimp
+  - gimp
   # - github
-  # - google-chrome
+  - google-chrome
   # - handbrake
   # - inkscape
   - iterm2
@@ -88,11 +92,11 @@ homebrew_cask_apps:
   # - slack
   - sublime-text
   # - tunnelblick
-  # - vagrant
-  # - vagrant-manager
-  # - virtualbox
+  - vagrant
+  - vagrant-manager
+  - virtualbox
   # - virtualbox-extension-pack
-  - vlc
+  # - vlc
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
@@ -153,6 +157,9 @@ dockitems_to_persist:
 
 # Ruby
 ruby_versions:
+  - "2.5.1"
+  - "2.6.3"
+  - "2.7.1"
   - "2.7.2"
   # - "3.0.0"
 
@@ -163,13 +170,13 @@ composer_packages: []
   # - name: drush
   #   state: present # present/absent, default: present
   #   version: "^8.1" # default: N/A
-gem_packages: []
+gem_packages:
   # - name: bundler
   #   state: present # present/absent/latest, default: present
   #   version: "~> 1.15.1" # default: N/A
-  # - bundler
-  # - rake
-  # - rubocop
+  - bundler
+  - rake
+  - rubocop
 npm_packages: []
   # - name: webpack
   #   state: present # present/absent/latest, default: present
