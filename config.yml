@@ -1,11 +1,11 @@
 ---
-# Default configuration
+# conway
 
 downloads: ~/.ansible-downloads/
 
 configure_dock: true
 configure_sudoers: false
-configure_dotfiles: false
+configure_dotfiles: true
 configure_terminal: false
 configure_osx: false
 configure_sublime: false
@@ -74,7 +74,7 @@ sudoers_custom_config: ''
 #   # Allow users in admin group to use sudo with no password.
 #   %admin ALL=(ALL) NOPASSWD: ALL
 
-dotfiles_repo: <set-me>
+dotfiles_repo: git.xr7.org:/srv/repo/home.git
 dotfiles_repo_accept_hostkey: yes
 dotfiles_repo_local_destination: ~/src/dotfiles
 dotfiles_files:
@@ -87,13 +87,17 @@ dotfiles_files:
   - .git-prompt
   - .screenrc
   - .ssh/config.d/common
-  # - .ssh/config.d/xr7
+  - .ssh/config.d/seriesumei
+  - .ssh/config.d/tomjs
+  - .ssh/config.d/xr7
   - .vimrc
   - bin/2mp3
   - bin/ddnsupdate
   - bin/exif-keywords
   - bin/flushdns
   - bin/foreach
+  - bin/keez-host
+  - bin/rax
   - bin/rvm-activate
   - bin/sbash
   - bin/screen-ssh-agent
@@ -135,11 +139,11 @@ homebrew_installed_packages:
   - wget
   # Casks are installed as recipes now
   # - barrier
-  # - clementine
+  - clementine
   # - darktable
   - firefox
   - flux
-  # - gimp
+  - gimp
   # - github
   # - google-chrome
   # - handbrake
@@ -148,16 +152,16 @@ homebrew_installed_packages:
   # - keepassx
   # - keepassxc
   # - moneydance
-  # - nextcloud
+  - nextcloud
   # - slack
-  # - sublime-text
-  # - thunderbird
+  - sublime-text
+  - thunderbird
   # - tunnelblick
   # - vagrant
   # - vagrant-manager
   # - virtualbox
   # - virtualbox-extension-pack
-  # - vlc
+  - vlc
 
 homebrew_taps:
   - homebrew/core
