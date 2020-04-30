@@ -1,28 +1,35 @@
 ---
-# Default configuration
+# bobo - Sonoma
 
 downloads: ~/.ansible-downloads/
 
 configure_dock: true
 configure_sudoers: false
-configure_dotfiles: false
+configure_dotfiles: true
 configure_terminal: false
 configure_osx: false
 configure_sublime: false
 configure_iterm: true
-configure_ruby: true
-configure_homebrew: false
+configure_ruby: false
+configure_homebrew: true
 
 dockitems_remove:
+  - App Store
   - Contacts
   - FaceTime
+  - Freeform
   - iBooks
+  - iTunes
+  - Keynote
   - Launchpad
   - Mail
   - Maps
   - Messages
+  - Music
   - News
   - Notes
+  - Numbers
+  - Pages
   - Podcasts
   - Reminders
   - Siri
@@ -31,40 +38,37 @@ dockitems_remove:
 dockitems_persist:
   # - name: Finder
   #   path: ""
-  #   pos: 1
+  #   pos: 0
   - name: iTerm
     path: "/Applications/iTerm.app"
-    pos: 2
+    pos: 1
   - name: Firefox
     path: "/Applications/Firefox.app"
-    pos: 3
+    pos: 2
   - name: Safari
     path: "/Applications/Safari.app"
-    pos: 4
+    pos: 3
   - name: Thunderbird
     path: "/Applications/Thunderbird.app"
+    pos: 4
+  - name: Slack
+    path: "/Applications/Slack.app"
     pos: 5
-  - name: Calendar
-    path: "/Applications/Calendar.app"
-    pos: 6
   - name: Sublime Text
     path: "/Applications/Sublime Text.app"
+    pos: 6
+  - name: Visual Studio Code
+    path: "/Applications/Visual Studio Code.app"
     pos: 7
   - name: strawberry
     path: "/Applications/strawberry.app"
     pos: 8
-  - name: Music
-    path: "/Applications/Music.app"
-    pos: 9
-  - name: Photos
-    path: "/Applications/Photos.app"
-    pos: 10
   - name: KeePassXC
     path: "/Applications/KeePassXC.app"
-    pos: 11
-  - name: System Preferences
-    path: "/Applications/System Preferences.app"
-    pos: 12
+    pos: 9
+  - name: System Settings
+    path: "/Applications/System Settings.app"
+    pos: 10
 
 sudoers_custom_config: ''
 # Example:
@@ -72,26 +76,32 @@ sudoers_custom_config: ''
 #   # Allow users in admin group to use sudo with no password.
 #   %admin ALL=(ALL) NOPASSWD: ALL
 
-dotfiles_repo: <set-me>
+dotfiles_repo: git.xr7.org:/srv/repo/home.git
 dotfiles_repo_accept_hostkey: yes
 dotfiles_repo_local_destination: ~/src/dotfiles
 dotfiles_files:
   - .aliases
   - .bash_profile
   - .bashrc
+  - .config/gh/config.yml
+  - .config/gh/hosts.yml
   - .config/git/ignore
   - .gitconfig
   - .gitignore
   - .git-prompt
   - .screenrc
   - .ssh/config.d/common
-  # - .ssh/config.d/xr7
+  - .ssh/config.d/seriesumei
+  - .ssh/config.d/tomjs
+  - .ssh/config.d/xr7
   - .vimrc
   - bin/2mp3
   - bin/ddnsupdate
   - bin/exif-keywords
   - bin/flushdns
   - bin/foreach
+  - bin/keez-host
+  - bin/rax
   - bin/rvm-activate
   - bin/sbash
   - bin/screen-ssh-agent
@@ -131,13 +141,11 @@ homebrew_installed_packages:
   - watch
   - wget
 
-homebrew_cask_appdir: /Applications
-homebrew_cask_apps:
-  # - barrier
+  - barrier
   # - darktable
   - firefox
   - flux
-  # - gimp
+  - gimp
   # - github
   # - google-chrome
   # - handbrake
@@ -146,16 +154,19 @@ homebrew_cask_apps:
   - keepassxc
   # - moneydance
   - nextcloud
-  # - slack
+  - slack
   - strawberry
   - sublime-text
-  # - thunderbird
+  - thunderbird
   # - tunnelblick
   # - vagrant
   # - vagrant-manager
   # - virtualbox
   # - virtualbox-extension-pack
   - vlc
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps: []
 
 homebrew_taps:
   - homebrew/core
@@ -204,8 +215,8 @@ Configure_Dock: yes                              # Enable Dock configuration
 Dock_PersistentApps: []                          # A plain path string, if empty [] it won't change anything
   # - /Applications/Safari.app
   # - /Applications/System Preferences.app
-Dock_PersistentOthers:                           # Either a plain path string or a dict like "{path: /path, type: [file | directory], arrange: [1-5] }"
-  - /Applications
+Dock_PersistentOthers: []                          # Either a plain path string or a dict like "{path: /path, type: [file | directory], arrange: [1-5] }"
+  # - /Applications
   # - { path: "~/Downloads", type: directory, arrange: 2}
   # - { path: "/Applications/Firefox.app", type: file, arrange: 3}
 Dock_TileSize: 40                                # Dock size
@@ -329,7 +340,7 @@ iterm2_defaults:
     value: false
   - name: PrefsCustomFolder
     type: string
-    value: "/Users/dtroyer/Cloud/etc/iTerm"
+    value: "/Users/dtroyer/Cloud/etc/iTerm-bobo"
 
 rvm1_gpg_key_server: hkp://keys.gnupg.net
 ruby_versions:
