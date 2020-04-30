@@ -1,12 +1,12 @@
 ---
-# Default configuration
+# Gillette configuration (Big Sur)
 
 downloads: ~/.ansible-downloads/
 
 configure_dock: true
 configure_sudoers: false
-configure_dotfiles: false
-configure_terminal: false
+configure_dotfiles: true
+configure_terminal: true
 configure_osx: false
 configure_sublime: false
 configure_iterm: true
@@ -14,15 +14,22 @@ configure_ruby: true
 configure_homebrew: false
 
 dockitems_remove:
+  - App Store
+  - Calendar
   - Contacts
   - FaceTime
   - iBooks
+  - iTunes
+  - Keynote
   - Launchpad
   - Mail
   - Maps
   - Messages
+  - Music
   - News
   - Notes
+  - Numbers
+  - Pages
   - Podcasts
   - Reminders
   - Siri
@@ -41,30 +48,21 @@ dockitems_persist:
   - name: Safari
     path: "/Applications/Safari.app"
     pos: 4
-  - name: Thunderbird
-    path: "/Applications/Thunderbird.app"
+  - name: Google Chrome
+    path: "/Applications/Google Chrome.app"
     pos: 5
-  - name: Calendar
-    path: "/Applications/Calendar.app"
+  - name: Microsoft Outlook
+    path: "/Applications/Microsoft Outlook.app"
     pos: 6
+  - name: Microsoft Teams
+    path: "/Applications/Microsoft Teams.app"
+    pos: 7
   - name: Sublime Text
     path: "/Applications/Sublime Text.app"
-    pos: 7
-  - name: Clementine
-    path: "/Applications/clementine.app"
     pos: 8
-  - name: iTunes
-    path: "/Applications/iTunes.app"
-    pos: 9
-  - name: Photos
-    path: "/Applications/Photos.app"
-    pos: 10
-  - name: KeePassX
-    path: "/Applications/KeePassX.app"
+  - name: KeePassXC
+    path: "/Applications/KeePassXC.app"
     pos: 11
-  # - name: KeePassXC
-  #   path: "/Applications/KeePassXC.app"
-  #   pos: 11
   - name: System Preferences
     path: "/Applications/System Preferences.app"
     pos: 12
@@ -75,32 +73,36 @@ sudoers_custom_config: ''
 #   # Allow users in admin group to use sudo with no password.
 #   %admin ALL=(ALL) NOPASSWD: ALL
 
-dotfiles_repo: <set-me>
+dotfiles_repo: git@github.cerner.com:dt081110/homefries.git
 dotfiles_repo_accept_hostkey: yes
-dotfiles_repo_local_destination: ~/src/dotfiles
+dotfiles_repo_local_destination: ~/src/cerner/homefries
 dotfiles_files:
   - .aliases
   - .bash_profile
   - .bashrc
   - .config/git/ignore
+  - .config/openstack/clouds.yaml
+  - .config/openstack/clouds-public.yaml
   - .gitconfig
-  - .gitignore
   - .git-prompt
   - .screenrc
-  - .ssh/config.d/common
+  - .ssh/config.d/cerner
+  # - .ssh/config.d/common
   # - .ssh/config.d/xr7
   - .vimrc
   - bin/2mp3
-  - bin/ddnsupdate
+  - bin/dup-backup.mac
   - bin/exif-keywords
   - bin/flushdns
   - bin/foreach
+  - bin/reset-teams-signature.sh
   - bin/rvm-activate
   - bin/sbash
   - bin/screen-ssh-agent
-  - bin/spine
-  - bin/split-repo.sh
+  - bin/show-cert
+  - bin/socks-control
   - bin/tcmount
+  - bin/vm-control
   - lib/Makefile
 
 homebrew_installed_packages:
@@ -123,7 +125,7 @@ homebrew_installed_packages:
   - mpc
   - nmap
   - openssl
-  # - packer
+  - packer
   - python@3.9
   - qemu
   - readline
@@ -140,22 +142,22 @@ homebrew_installed_packages:
   # - darktable
   - firefox
   - flux
-  # - gimp
+  - gimp
   # - github
-  # - google-chrome
+  - google-chrome
   # - handbrake
   # - inkscape
   - iterm2
   # - keepassx
-  # - keepassxc
+  - keepassxc
   # - moneydance
   # - nextcloud
   # - slack
   # - sublime-text
   # - thunderbird
   # - tunnelblick
-  # - vagrant
-  # - vagrant-manager
+  - vagrant
+  - vagrant-manager
   # - virtualbox
   # - virtualbox-extension-pack
   # - vlc
@@ -179,10 +181,13 @@ composer_packages: []
 # - name: drush
 #   state: present # present/absent, default: present
 #   version: "^8.1" # default: N/A
-gem_packages: []
+gem_packages:
 # - name: bundler
 #   state: present # present/absent/latest, default: present
 #   version: "~> 1.15.1" # default: N/A
+  - bundler
+  - rake
+  - rubocop
 npm_packages: []
 # - name: webpack
 #   state: present # present/absent/latest, default: present
@@ -214,7 +219,7 @@ Dock_PersistentOthers:                           # Either a plain path string or
   - /Applications
   # - { path: "~/Downloads", type: directory, arrange: 2}
   # - { path: "/Applications/Firefox.app", type: file, arrange: 3}
-Dock_TileSize: 40                                # Dock size
+Dock_TileSize: 32                                # Dock size
 Dock_Magnification: no                           # Dock magnification
 Dock_LargeSize: 128                              # Icon size of magnified Dock items
 Dock_Orientation: "left"                         # Dock orientation: left, bottom, right
@@ -297,7 +302,7 @@ Keyboard_InitialKeyRepeat: 20                    # Set delay until repeat, in mi
 # Keyboard_PowerButtonSleepsSystem: no             # Prevent accidental Power button presses from sleeping system
 # Keyboard_PressAndHoldEnabled: no                 # Disable press-and-hold for keys in favor of key repeat
 
-Configure_LoginWindow: yes                       # Enable Launch Services configuration
+Configure_LoginWindow: no                       # Enable Launch Services configuration
 LoginWindow_LoginWindowText: "{{ ansible_hostname }}" # Text message to show in the login screen
 LoginWindow_DesktopPicture: ""                   # Change login screen background
 
