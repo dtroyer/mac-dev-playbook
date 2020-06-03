@@ -27,17 +27,25 @@ dotfiles_files:
 
 homebrew_installed_packages:
   # - ansible # Installed via homebrew
+  - autoconf
+  - autossh
   - bash-completion
+  - coreutils
+  - exiftool
   - fping
   - gettext
   - gifsicle
   - git
+  - github/gh/gh
   - gpg
   - libevent
   - nmap
   - readline
   - openssl
+  - qemu
+  - sqlite
   - tcpdump
+  - tmux
   - watch
   - wget
 
@@ -54,7 +62,7 @@ homebrew_cask_apps:
   - iterm2
   # - keepassx
   # - slack
-  # - sublime-text
+  - sublime-text
   # - vagrant
   # - vagrant-manager
   # - virtualbox
