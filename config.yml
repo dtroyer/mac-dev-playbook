@@ -1,12 +1,12 @@
 ---
 # Default configuration
 
-configure_dotfiles: no
+configure_dotfiles: yes
 configure_sudoers: no
 configure_terminal: no
 configure_osx: no
 
-dotfiles_repo: <set-me>
+dotfiles_repo: git.xr7.org:/srv/repo/home.git
 dotfiles_repo_accept_hostkey: yes
 dotfiles_repo_local_destination: ~/src/dotfiles
 dotfiles_files:
@@ -19,6 +19,9 @@ dotfiles_files:
   # - .osx
   - .screenrc
   - .ssh/config.d/common
+  - .ssh/config.d/seriesumei
+  - .ssh/config.d/tomjs
+  - .ssh/config.d/xr7
   - .vimrc
   - bin/2mp3
   - bin/exif-keywords
@@ -68,14 +71,14 @@ homebrew_cask_apps:
   # - darktable
   # - firefox
   - flux
-  # - gimp
+  - gimp
   # - github
   # - google-chrome
   # - handbrake
   # - inkscape
   - iterm2
   # - keepassx
-  # - keepassxc
+  - keepassxc
   # - moneydance
   # - nextcloud
   # - slack
