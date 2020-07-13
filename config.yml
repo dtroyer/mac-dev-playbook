@@ -31,6 +31,7 @@ homebrew_installed_packages:
   - autossh
   - bash-completion
   - coreutils
+  - duplicity
   - exiftool
   - fping
   - gettext
@@ -39,10 +40,12 @@ homebrew_installed_packages:
   - github/gh/gh
   - gpg
   - libevent
+  - mpc
   - nmap
   - readline
   - openssl
   - qemu
+  - rsync
   - sqlite
   - tcpdump
   - tmux
