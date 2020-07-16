@@ -13,8 +13,9 @@ dotfiles_files:
   - .aliases
   - .bash_profile
   - .bashrc
+  - .config/git/ignore
   - .gitconfig
-  - .gitignore
+  - .git-prompt
   # - .osx
   - .ssh/config.d/common
   - .vimrc
