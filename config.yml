@@ -17,10 +17,14 @@ dotfiles_files:
   - .gitconfig
   - .git-prompt
   # - .osx
+  - .screenrc
   - .ssh/config.d/common
   - .vimrc
+  - bin/2mp3
+  - bin/exif-keywords
   - bin/flushdns
   - bin/foreach
+  - bin/rvm-activate
   - bin/sbash
   - bin/screen-ssh-agent
   - bin/spine
@@ -49,6 +53,7 @@ homebrew_installed_packages:
   - rsync
   - sqlite
   - tcpdump
+  - tree
   - tmux
   - watch
   - wget
