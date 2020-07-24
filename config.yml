@@ -85,7 +85,7 @@ osx_script: "~/.osx --no-restart"
 
 # Ruby
 ruby_versions:
-  - "2.7.0"
+  - "2.7.1"
 
 # Install packages from other package managers.
 # Note: You are responsible for making sure the required package managers are
