@@ -64,17 +64,28 @@ homebrew_taps:
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
+  - clementine
+  # - darktable
   # - firefox
   - flux
+  # - gimp
+  # - github
   # - google-chrome
   # - handbrake
+  # - inkscape
   - iterm2
   # - keepassx
+  # - keepassxc
+  # - moneydance
+  # - nextcloud
   # - slack
   - sublime-text
+  # - tunnelblick
   # - vagrant
   # - vagrant-manager
   # - virtualbox
+  # - virtualbox-extension-pack
+  - vlc
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
