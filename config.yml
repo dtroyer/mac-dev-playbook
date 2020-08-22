@@ -96,7 +96,7 @@ homebrew_cask_apps:
   # - moneydance
   # - nextcloud
   # - slack
-  - sublime-text
+  # - sublime-text
   # - tunnelblick
   - vagrant
   - vagrant-manager
