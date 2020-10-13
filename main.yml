@@ -22,6 +22,8 @@
         state: directory
 
   roles:
+    - role: lafarer.osx-defaults
+      # tags: ['defaults']
     - role: geerlingguy.homebrew
       tags: ['homebrew']
     - role: geerlingguy.dotfiles
@@ -32,6 +34,8 @@
       tags: ['mas']
 
   tasks:
+    # - include-tasks: tasks/defaults.yaml
+
     - include_tasks: tasks/ansible-setup.yml
 
     - include_tasks: tasks/sudoers.yml

@@ -3,6 +3,9 @@
 all:
 	ansible-playbook main.yml -i inventory -K
 
+defaults:
+	ansible-playbook osx-defaults.yaml -i inventory -K
+
 ruby:
 	ansible-playbook ruby.yaml -i inventory -K
 
@@ -13,4 +16,4 @@ setup: get-roles
 	ansible-galaxy install -r requirements.yml
 
 get-roles:
-	ansible-galaxy install rvm.ruby tkimball83.iterm2
+	ansible-galaxy install rvm.ruby tkimball83.iterm2 lafarer.osx-defaults
