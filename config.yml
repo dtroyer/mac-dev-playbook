@@ -15,6 +15,8 @@ dotfiles_files:
   - .bash_profile
   - .bashrc
   - .config/git/ignore
+  - .config/openstack/clouds.yaml
+  - .config/openstack/clouds-public.yaml
   - .gitconfig
   - .git-prompt
   # - .osx
@@ -86,7 +88,7 @@ homebrew_cask_apps:
   # - inkscape
   - iterm2
   # - keepassx
-  # - keepassxc
+  - keepassxc
   # - moneydance
   # - nextcloud
   # - slack
