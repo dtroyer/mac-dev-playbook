@@ -15,5 +15,8 @@ iterm:
 setup: get-roles
 	ansible-galaxy install -r requirements.yml
 
+get-collections:
+	ansible-galaxy collection install community.general
+
 get-roles:
 	ansible-galaxy install rvm.ruby tkimball83.iterm2 lafarer.osx-defaults
