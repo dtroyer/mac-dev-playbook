@@ -1,10 +1,16 @@
 # Local Mac Dev Setup Makefile
 
 all:
-	ansible-playbook main.yml -i inventory -K
+	ansible-playbook main.yml -i inventory -K $(TAGS)
 
 defaults:
 	ansible-playbook osx-defaults.yaml -i inventory -K
+
+dock:
+	$(MAKE) all TAGS='--tags dock'
+
+homebrew:
+	$(MAKE) all TAGS='--tags homebrew'
 
 ruby:
 	ansible-playbook ruby.yaml -i inventory -K
