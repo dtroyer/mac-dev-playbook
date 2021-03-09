@@ -22,6 +22,7 @@ dotfiles_files:
   - .ssh/config.d/common
   - .vimrc
   - bin/2mp3
+  - bin/ddnsupdate
   - bin/exif-keywords
   - bin/flushdns
   - bin/foreach
@@ -29,6 +30,7 @@ dotfiles_files:
   - bin/sbash
   - bin/screen-ssh-agent
   - bin/spine
+  - bin/split-repo.sh
   - bin/tcmount
 
 homebrew_installed_packages:
@@ -42,6 +44,7 @@ homebrew_installed_packages:
   - exiftool
   - fping
   - gettext
+  - gh
   - gifsicle
   - git
   - github/gh/gh
@@ -49,14 +52,15 @@ homebrew_installed_packages:
   - libevent
   - mpc
   - nmap
+  - python@3.9
   - readline
   - openssl
   - qemu
   - rsync
   - sqlite
   - tcpdump
-  - tree
   - tmux
+  - tree
   - watch
   - wget
 
