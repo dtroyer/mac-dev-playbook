@@ -10,6 +10,7 @@ configure_terminal: false
 configure_osx: false
 configure_sublime: false
 configure_iterm: true
+configure_ruby: true
 
 dockitems_remove:
   - Contacts
@@ -313,6 +314,14 @@ iterm2_defaults:
   - name: FocusFollowsMouse
     type: bool
     value: true
+
+rvm1_gpg_key_server: hkp://keys.gnupg.net
+ruby_versions:
+  - "2.5.1"
+  - "2.6.3"
+  - "2.7.1"
+  - "2.7.2"
+  # - "3.0.0"
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []
