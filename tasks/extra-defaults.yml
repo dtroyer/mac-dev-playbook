@@ -1,0 +1,2 @@
+---
+- { include: finder.yml, tags: "finder", when: Configure_Finder|bool }
