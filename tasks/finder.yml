@@ -1,0 +1,9 @@
+---
+- block:
+  - name: "Finder - Sidebar - Items"
+    osx_defaults: { domain: 'com.apple.finder', key: "{{ item.key }}", type: "{{ item.type }}", value: "{{ item.value  }}" }
+    loop:
+      - { key: 'ShowRecentTags', type: 'bool', value: '{{ Finder_ShowRecentTags }}'}
+      - { key: 'SidebarShowingSignedIntoiCloud', type: 'bool', value: '{{ Finder_SidebarShowingSignedIntoiCloud }}'}
+    when: item.value | string | length > 0
+    notify: Restart Finder
