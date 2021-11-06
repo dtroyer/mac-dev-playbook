@@ -26,6 +26,8 @@
       tags: ['defaults']
     - role: geerlingguy.mac.homebrew
       tags: ['homebrew']
+    - role: tkimball83.iterm2
+      tags: ['iterm']
     - role: geerlingguy.dotfiles
       when: configure_dotfiles
       tags: ['dotfiles']
