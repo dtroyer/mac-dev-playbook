@@ -15,6 +15,9 @@ homebrew:
 iterm:
 	$(MAKE) all TAGS='--tags iterm'
 
+ruby:
+	$(MAKE) all TAGS='--tags ruby'
+
 setup: get-collections get-roles
 	ansible-galaxy install $(FORCE) -r requirements.yml
 
@@ -22,4 +25,4 @@ get-collections:
 	ansible-galaxy collection install community.general
 
 get-roles:
-	ansible-galaxy install $(FORCE) lafarer.osx-defaults tkimball83.iterm2
+	ansible-galaxy install $(FORCE) lafarer.osx-defaults rvm.ruby tkimball83.iterm2
