@@ -46,6 +46,9 @@
       tags: ['ruby']
 
   tasks:
+    - import_tasks: tasks/extra-defaults.yml
+      tags: ['defaults']
+
     - import_tasks: tasks/sudoers.yml
       when: configure_sudoers
       tags: ['sudoers']
