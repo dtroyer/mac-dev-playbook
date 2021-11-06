@@ -238,6 +238,9 @@ Finder_FXShowPosixPathInTitle: yes               # Show full POSIX path as Finde
 # Finder_QuitMenuItem: no                          # Allow quitting via ⌘ + Q
 Finder_QLEnableTextSelection: yes                # Select and Copy Text from Quick Look
 
+Finder_ShowRecentTags: no                        # Show Recent Tags
+Finder_SidebarShowingSignedIntoiCloud: no        # Show iCloud
+
 Configure_General: yes                           # Enable General configuration
 General_AppleInterfaceStyle: "Dark"              # Use Dark menu bar and Dock (Empty or "Dark")
 General_AppleHighlightColor: "Blue"              # Highlight color (Red, Orange, Yellow, Green, Blue, Purple, Pink, Brown, Graphite)
