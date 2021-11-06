@@ -23,7 +23,8 @@
         state: directory
 
   roles:
-    - role: elliotweiser.osx-command-line-tools
+    - role: lafarer.osx-defaults
+      tags: ['defaults']
     - role: geerlingguy.mac.homebrew
       tags: ['homebrew']
     - role: geerlingguy.dotfiles

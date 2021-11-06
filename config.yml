@@ -188,5 +188,109 @@ pip_packages: []
 #   state: present # present/absent/latest, default: present
 #   version: "0.16.3" # default: N/A
 
+
+Configure_DateTime: yes                          # Enable Date Time configuration
+DateTime_TimeZone: "America/Chicago"             # Set the timezone; see `systemsetup -listtimezones` for other values
+DateTime_AutomaticTimeZone: no                   # Set time zome automatically using current location
+DateTime_DateFormat: "EEE MMM d HH:mm:ss"        # Menu bar clock format ("h:mm": Default, "HH": Use a 24-hour clock, "a": Show AM/PM, "ss": Display the time with seconds
+
+Configure_Dashboard: yes                         # Enable Dashboard configuration
+Dashboard_McxDisabled: no                        # Disable Dashboard
+Dashboard_EnabledState: 3                        # Dashboard state (1: Off, 2: As Space, 3: As Overlay)
+# Dashboard_DontShowAsSpace: yes                   # Don’t show Dashboard as a Space
+# Dashboard_DevMode: no                            # Enable Dashboard dev mode (allows keeping widgets on the desktop)
+
+Configure_Dock: yes                              # Enable Dock configuration
+Dock_PersistentApps: []                          # A plain path string, if empty [] it won't change anything
+  # - /Applications/Safari.app
+  # - /Applications/System Preferences.app
+Dock_PersistentOthers:                           # Either a plain path string or a dict like "{path: /path, type: [file | directory], arrange: [1-5] }"
+  - /Applications
+  # - { path: "~/Downloads", type: directory, arrange: 2}
+  # - { path: "/Applications/Firefox.app", type: file, arrange: 3}
+Dock_TileSize: 40                                # Dock size
+Dock_Magnification: no                           # Dock magnification
+Dock_LargeSize: 128                              # Icon size of magnified Dock items
+Dock_Orientation: "left"                         # Dock orientation: left, bottom, right
+
+Configure_Finder: yes                            # Enable Finder configuration
+Finder_ShowHardDrivesOnDesktop: yes              # Show hard drives on the desktop
+# Finder_ShowExternalHardDrivesOnDesktop: yes      # Show external hard drives on the desktop
+# Finder_ShowRemovableMediaOnDesktop: yes          # Show CDs,DVDs and iPods on the desktop
+Finder_ShowMountedServersOnDesktop: yes          # Show connected servers on the desktop
+Finder_NewWindowTarget: "Home"                   # New Finder windows shows ("Computer", "Computer's HD", "Home", "Desktop", "Documents", "All My Files" )
+Finder_FinderSpawnTab: no                        # Open folders in tabs instead of new windows
+Finder_AppleShowAllExtensions: yes               # Show all fiename extensions
+Finder_FXEnableExtensionChangeWarning: no        # Show warning before changing an extension
+Finder_WarnOnEmptyTrash: no                      # Show warning before emptying the trash
+Finder_FXDefaultSearchScope: "SCsp"              # When performing a search (SCev:Search This Mac, SCcf:Search the Current Folder, SCsp:Use the Previous Search Scope)
+# Finder_AppleShowAllFiles: no                     # Show hidden files
+Finder_FXPreferredViewStyle: "clmv"              # View as (icnv:Icons, Nlsv:List, clmv:Column, Flwv:Cover Flow)
+# Finder_FXPreferredGroupBy: "None"                # Arrange By (None, Name, Application Category, Date Last Opened, Date Added, Size, Finder Tags)
+Finder_ShowTabView: no                           # Show Tab Bar
+# Finder_ShowPathbar: no                           # Show Path Bar
+Finder_ShowStatusBar: yes                        # Show Status Bar
+# Finder_ShowSidebar: yes                          # Show Side Bar
+Finder_ColumnShowIcons: no                       # Show Preview
+Finder_FXShowPosixPathInTitle: yes               # Show full POSIX path as Finder window title
+# Finder_QuitMenuItem: no                          # Allow quitting via ⌘ + Q
+Finder_QLEnableTextSelection: yes                # Select and Copy Text from Quick Look
+
+Configure_General: yes                           # Enable General configuration
+General_AppleInterfaceStyle: "Dark"              # Use Dark menu bar and Dock (Empty or "Dark")
+General_AppleHighlightColor: "Blue"              # Highlight color (Red, Orange, Yellow, Green, Blue, Purple, Pink, Brown, Graphite)
+General_SidebarIconSize: 1                       # Sidebar icon size (Small: 1, Medium: 2, Large: 3)
+General_AppleShowScrollBars: "Always"            # Scroll bar visibility (WhenScrolling, Automatic, Always)
+General_CloseWindowsWhenQuittingApp: yes         # Close windows when quitting an application
+
+Configure_HotCorners: yes                        # Enable Hot Corners configura  tions
+                                                 # HotCorners Available Actions:
+                                                 #     - { name: "no-op", value: 0 }
+                                                 #     - { name: "Disabled", value: 1 }
+                                                 #     - { name: "Mission Control", value: 2 }
+                                                 #     - { name: "Show Application Windows", value: 3 }
+                                                 #     - { name: "Desktop", value: 4 }
+                                                 #     - { name: "Start Screen Saver", value: 5 }
+                                                 #     - { name: "Disable Screen Saver", value: 6 }
+                                                 #     - { name: "Dashboard", value: 7 }
+                                                 #     - { name: "Put Display To Sleep", value: 10 }
+                                                 #     - { name: "Launchpad", value: 11 }
+                                                 #     - { name: "Notification Center", value: 12 }
+HotCorners_BottomLeftModifier: "Enabled"         # Enabled, Disabled
+HotCorners_BottomRightModifier: "Enabled"        # Enabled, Disabled
+HotCorners_TopLeftModifier: "Enabled"            # Enabled, Disabled
+HotCorners_TopRightModifier: "Enabled"           # Enabled, Disabled
+
+HotCorners_BottomLeftAction: "Start Screen Saver"
+HotCorners_BottomRightAction: "Desktop"
+HotCorners_TopLeftAction: "Disable Screen Saver"
+HotCorners_TopRightAction: "Dashboard"
+
+Configure_ICloud: no                             # Enable iCloud configuration
+ICloud_NSDocumentSaveNewDocumentsToCloud: no     # Save to iCloud by default
+
+Configure_Keyboard: yes                          # Enable Keyboard configuration
+Keyboard_KeyRepeat: 6                            # Set key repeat rate (Off: 300000, Slow: 120, Fast: 2)
+Keyboard_InitialKeyRepeat: 20                    # Set delay until repeat, in milliseconds (Long: 120, Short: 15)
+# Keyboard_fnState: no                             # Use F1, F2, etc. keys as standard function keys
+# Keyboard_kDim: no                                # Adjust keyboard brightness in low light
+# Keyboard_kDimTime: 0                             # Dim keyboard after idle time (in seconds, 0 is Never)
+# Keyboard_AutomaticSpellingCorrectionEnabled: no  # Correct spelling automatically
+# Keyboard_AutomaticQuoteSubstitutionEnabled: no   # Use smart quotes
+# Keyboard_AutomaticDashSubstitutionEnabled: no    # Use smart dashes
+# Keyboard_AutomaticPeriodSubstitutionEnabled: no  # Automatic period substitution
+# Keyboard_AppleKeyboardUIMode: "All controls"     # Full Keyboard Access (1 : Text boxes and lists only, 3 : All controls)
+# Keyboard_PowerButtonSleepsSystem: no             # Prevent accidental Power button presses from sleeping system
+# Keyboard_PressAndHoldEnabled: no                 # Disable press-and-hold for keys in favor of key repeat
+
+Configure_LoginWindow: yes                       # Enable Launch Services configuration
+LoginWindow_LoginWindowText: "{{ ansible_hostname }}" # Text message to show in the login screen
+LoginWindow_DesktopPicture: ""                   # Change login screen background
+
+Configure_Trackpad: yes                          # Enable Trackpad configuration
+Trackpad_Clicking: yes                           # Tap to Click
+#Trackpad_ForceClickAndHapticFeedback: no          # Force Click and haptic feedback
+Trackpad_ScrollDirectionNatural: no                # Enable Natural Scroll Direction (it's a macOS default)
+
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []
