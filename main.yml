@@ -37,6 +37,13 @@
     - role: geerlingguy.mac.dock
       when: configure_dock
       tags: ['dock']
+    - role: rvm.ruby
+      tags: ['ruby']
+      rvm1_rubies: "{{ ruby_versions }}"
+      rvm1_install_flags: '--autolibs=enable --user-install'
+      rvm1_user: "{{ ansible_env.USER }}"
+      when: configure_ruby
+      tags: ['ruby']
 
   tasks:
     - import_tasks: tasks/sudoers.yml
@@ -57,6 +64,10 @@
     - import_tasks: tasks/sublime-text.yml
       when: configure_sublime
       tags: ['sublime-text']
+
+    # - import_tasks: tasks/ruby.yml
+    #   when: configure_ruby
+    #   tags: ['ruby']
 
     - block:
         - name: Run configured post-provision ansible task files.

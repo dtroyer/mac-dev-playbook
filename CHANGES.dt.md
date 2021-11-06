@@ -7,6 +7,7 @@ I've updated GG's setup for my use, including some default config:
 * Add more-defaults.sh to handle all of the bits that osx-defaults is unable to
   (such as nested dicts)
 * Use lafarer.osx-defaults for the config defaults rather than .osx
+* Use rvm.ruby to install Ruby environment support
 * Use tkimball83.iterm2 to configure iTerm2 defaults
 
 # Branches
