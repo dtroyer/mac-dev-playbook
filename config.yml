@@ -9,6 +9,7 @@ configure_dotfiles: false
 configure_terminal: false
 configure_osx: false
 configure_sublime: false
+configure_iterm: true
 
 dockitems_remove:
   - Contacts
@@ -291,6 +292,27 @@ Configure_Trackpad: yes                          # Enable Trackpad configuration
 Trackpad_Clicking: yes                           # Tap to Click
 #Trackpad_ForceClickAndHapticFeedback: no          # Force Click and haptic feedback
 Trackpad_ScrollDirectionNatural: no                # Enable Natural Scroll Direction (it's a macOS default)
+
+iterm2_defaults:
+  # General -> Closing
+  - name: PromptOnQuit
+    type: bool
+    value: false
+  # Appearance -> Windows
+  - name: UseBorder
+    type: bool
+    value: true
+  # Appearance -> Tabs
+  - name: HideTab
+    type: bool
+    value: false
+  # Pointer -> General
+  - name: ThreeFingerEmulates
+    type: bool
+    value: true
+  - name: FocusFollowsMouse
+    type: bool
+    value: true
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []
