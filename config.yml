@@ -1,0 +1,192 @@
+---
+# Default configuration
+
+downloads: ~/.ansible-downloads/
+
+configure_dock: true
+configure_sudoers: false
+configure_dotfiles: false
+configure_terminal: false
+configure_osx: false
+configure_sublime: false
+
+dockitems_remove:
+  - Contacts
+  - FaceTime
+  - iBooks
+  - Launchpad
+  - Mail
+  - Maps
+  - Messages
+  - News
+  - Notes
+  - Podcasts
+  - Reminders
+  - Siri
+  - TV
+
+dockitems_persist:
+  # - name: Finder
+  #   path: ""
+  #   pos: 1
+  - name: iTerm
+    path: "/Applications/iTerm.app"
+    pos: 2
+  - name: Firefox
+    path: "/Applications/Firefox.app"
+    pos: 3
+  - name: Safari
+    path: "/Applications/Safari.app"
+    pos: 4
+  - name: Thunderbird
+    path: "/Applications/Thunderbird.app"
+    pos: 5
+  - name: Calendar
+    path: "/Applications/Calendar.app"
+    pos: 6
+  - name: Sublime Text
+    path: "/Applications/Sublime Text.app"
+    pos: 7
+  - name: Clementine
+    path: "/Applications/clementine.app"
+    pos: 8
+  - name: iTunes
+    path: "/Applications/iTunes.app"
+    pos: 9
+  - name: Photos
+    path: "/Applications/Photos.app"
+    pos: 10
+  - name: KeePassX
+    path: "/Applications/KeePassX.app"
+    pos: 11
+  # - name: KeePassXC
+  #   path: "/Applications/KeePassXC.app"
+  #   pos: 11
+  - name: System Preferences
+    path: "/Applications/System Preferences.app"
+    pos: 12
+
+sudoers_custom_config: ''
+# Example:
+# sudoers_custom_config: |
+#   # Allow users in admin group to use sudo with no password.
+#   %admin ALL=(ALL) NOPASSWD: ALL
+
+dotfiles_repo: <set-me>
+dotfiles_repo_accept_hostkey: yes
+dotfiles_repo_local_destination: ~/src/dotfiles
+dotfiles_files:
+  - .aliases
+  - .bash_profile
+  - .bashrc
+  - .config/git/ignore
+  - .gitconfig
+  - .gitignore
+  - .git-prompt
+  - .screenrc
+  - .ssh/config.d/common
+  # - .ssh/config.d/xr7
+  - .vimrc
+  - bin/2mp3
+  - bin/ddnsupdate
+  - bin/exif-keywords
+  - bin/flushdns
+  - bin/foreach
+  - bin/rvm-activate
+  - bin/sbash
+  - bin/screen-ssh-agent
+  - bin/spine
+  - bin/split-repo.sh
+  - bin/tcmount
+  - lib/Makefile
+
+homebrew_installed_packages:
+  - autoconf
+  - autossh
+  - bash-completion
+  - cdrtools
+  - coreutils
+  - dockutil
+  - duplicity
+  - exiftool
+  - fping
+  - gettext
+  - gh
+  - gifsicle
+  - git
+  - gpg
+  - libevent
+  - mosh
+  - mpc
+  - nmap
+  - openssl
+  # - packer
+  - python@3.9
+  - qemu
+  - readline
+  - rsync
+  - sqlite
+  - tcpdump
+  - tmux
+  - tree
+  - watch
+  - wget
+
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  # - barrier
+  # - clementine
+  # - darktable
+  - firefox
+  - flux
+  # - gimp
+  # - github
+  # - google-chrome
+  # - handbrake
+  # - inkscape
+  - iterm2
+  # - keepassx
+  # - keepassxc
+  # - moneydance
+  # - nextcloud
+  # - slack
+  # - sublime-text
+  # - thunderbird
+  # - tunnelblick
+  # - vagrant
+  # - vagrant-manager
+  # - virtualbox
+  # - virtualbox-extension-pack
+  - vlc
+
+# See `geerlingguy.mas` role documentation for usage instructions.
+mas_installed_apps: []
+mas_email: ""
+mas_password: ""
+
+# Install packages from other package managers.
+# Note: You are responsible for making sure the required package managers are
+# installed, eg. through homebrew.
+composer_packages: []
+# - name: drush
+#   state: present # present/absent, default: present
+#   version: "^8.1" # default: N/A
+gem_packages: []
+# - name: bundler
+#   state: present # present/absent/latest, default: present
+#   version: "~> 1.15.1" # default: N/A
+npm_packages: []
+# - name: webpack
+#   state: present # present/absent/latest, default: present
+#   version: "^2.6" # default: N/A
+pip_packages: []
+# - name: mkdocs
+#   state: present # present/absent/latest, default: present
+#   version: "0.16.3" # default: N/A
+
+# Glob pattern to ansible task files to run after all other tasks are finished.
+post_provision_tasks: []
