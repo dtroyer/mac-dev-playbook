@@ -22,7 +22,7 @@ setup: get-collections get-roles
 	ansible-galaxy install $(FORCE) -r requirements.yml
 
 get-collections:
-	ansible-galaxy collection install community.general
+	ansible-galaxy collection install community.general geerlingguy.mac
 
 get-roles:
 	ansible-galaxy install $(FORCE) lafarer.osx-defaults rvm.ruby tkimball83.iterm2
