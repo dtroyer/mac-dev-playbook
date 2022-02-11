@@ -9,6 +9,9 @@ defaults:
 dock:
 	$(MAKE) all TAGS='--tags dock'
 
+dotfiles:
+	$(MAKE) all TAGS='--tags dotfiles'
+
 homebrew:
 	$(MAKE) all TAGS='--tags homebrew'
 
