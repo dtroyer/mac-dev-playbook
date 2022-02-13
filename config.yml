@@ -133,13 +133,7 @@ homebrew_installed_packages:
   - tree
   - watch
   - wget
-
-homebrew_taps:
-  - homebrew/core
-  - homebrew/cask
-
-homebrew_cask_appdir: /Applications
-homebrew_cask_apps:
+  # Casks are installed as recipes now
   # - barrier
   # - clementine
   # - darktable
@@ -163,7 +157,14 @@ homebrew_cask_apps:
   # - vagrant-manager
   # - virtualbox
   # - virtualbox-extension-pack
-  - vlc
+  # - vlc
+
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps: []
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
@@ -269,7 +270,7 @@ HotCorners_TopRightModifier: "Enabled"           # Enabled, Disabled
 HotCorners_BottomLeftAction: "Start Screen Saver"
 HotCorners_BottomRightAction: "Desktop"
 HotCorners_TopLeftAction: "Disable Screen Saver"
-HotCorners_TopRightAction: "Dashboard"
+HotCorners_TopRightAction: "Mission Control"
 
 Configure_ICloud: no                             # Enable iCloud configuration
 ICloud_NSDocumentSaveNewDocumentsToCloud: no     # Save to iCloud by default
