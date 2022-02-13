@@ -1,9 +1,14 @@
 ---
 - block:
   - name: "Finder - Sidebar - Items"
-    osx_defaults: { domain: 'com.apple.finder', key: "{{ item.key }}", type: "{{ item.type }}", value: "{{ item.value  }}" }
+    osx_defaults: { domain: 'com.apple.finder', key: "{{ item.key }}", type: "{{ item.type }}", value: "{{ item.value }}" }
     loop:
       - { key: 'ShowRecentTags', type: 'bool', value: '{{ Finder_ShowRecentTags }}'}
       - { key: 'SidebarShowingSignedIntoiCloud', type: 'bool', value: '{{ Finder_SidebarShowingSignedIntoiCloud }}'}
     when: item.value | string | length > 0
+    notify: Restart Finder
+
+  - name: "Finder - PreviewPaneSettings - showQuickActions"
+    shell: |
+      defaults write com.apple.finder "PreviewPaneSettings" -dict "com.adobe.pdf" '{"showQuickActions"=0;}' "com.apple.application" '{"showQuickActions"=0;}' "public.archive" '{"showQuickActions"=0;}' "public.html" '{"showQuickActions"=0;}' "public.image" '{"showQuickActions"=0;}' "public.item" '{"showQuickActions"=0;}' "public.spreadsheet" '{"showQuickActions"=0;}'
     notify: Restart Finder
