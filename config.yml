@@ -249,6 +249,9 @@ General_SidebarIconSize: 1                       # Sidebar icon size (Small: 1, 
 General_AppleShowScrollBars: "Always"            # Scroll bar visibility (WhenScrolling, Automatic, Always)
 General_CloseWindowsWhenQuittingApp: yes         # Close windows when quitting an application
 
+General_AppleAccentColor: 5                      # Purple
+General_MouseTrackingSpeed: 2
+
 Configure_HotCorners: yes                        # Enable Hot Corners configura  tions
                                                  # HotCorners Available Actions:
                                                  #     - { name: "no-op", value: 0 }

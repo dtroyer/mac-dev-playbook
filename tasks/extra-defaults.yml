@@ -1,2 +1,3 @@
 ---
 - { include: finder.yml, tags: "finder", when: Configure_Finder|bool }
+- { include: general.yml, tags: "general", when: Configure_General|bool }
