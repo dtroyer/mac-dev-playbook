@@ -191,6 +191,8 @@ pip_packages: []
 #   state: present # present/absent/latest, default: present
 #   version: "0.16.3" # default: N/A
 
+Configure_Assistant: yes
+Assistant_Enabled: no
 
 Configure_DateTime: yes                          # Enable Date Time configuration
 DateTime_TimeZone: "America/Chicago"             # Set the timezone; see `systemsetup -listtimezones` for other values
