@@ -1,0 +1,12 @@
+---
+- block:
+
+  - name: "General - Appearance"
+    osx_defaults: { domain: 'NSGlobalDomain', key: "{{ item.key }}", type: "{{ item.type }}", value: "{{ item.value }}" }
+    loop:
+      - { description: 'Accent color',  key: 'AppleAccentColor', type: 'int', value: "{{ General_AppleAccentColor }}" }
+      - { description: 'Mouse tracking speed',  key: 'com.apple.mouse.scaling', type: 'float', value: "{{ General_MouseTrackingSpeed }}" }
+    when: item.value | string | length > 0
+    notify:
+      - Restart MenuBar
+      - Restart Dock
