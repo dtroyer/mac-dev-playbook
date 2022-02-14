@@ -216,6 +216,8 @@ Dock_Magnification: no                           # Dock magnification
 Dock_LargeSize: 128                              # Icon size of magnified Dock items
 Dock_Orientation: "left"                         # Dock orientation: left, bottom, right
 
+Dock_SpacesMRU: no                               # Rearrange spaces
+
 Configure_Finder: yes                            # Enable Finder configuration
 Finder_ShowHardDrivesOnDesktop: yes              # Show hard drives on the desktop
 # Finder_ShowExternalHardDrivesOnDesktop: yes      # Show external hard drives on the desktop
