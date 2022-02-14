@@ -1,4 +1,5 @@
 ---
+- { include: assistant.yml, tags: "assistant", when: Configure_Assistant|bool }
 - { include: dock.yml, tags: "dock", when: Configure_Dock|bool }
 - { include: finder.yml, tags: "finder", when: Configure_Finder|bool }
 - { include: general.yml, tags: "general", when: Configure_General|bool }
