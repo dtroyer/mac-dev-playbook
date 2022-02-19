@@ -50,7 +50,7 @@ dockitems_persist:
   - name: Sublime Text
     path: "/Applications/Sublime Text.app"
     pos: 7
-  - name: Clementine
+  - name: clementine
     path: "/Applications/clementine.app"
     pos: 8
   - name: iTunes
