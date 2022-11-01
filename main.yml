@@ -26,6 +26,7 @@
     - role: lafarer.osx-defaults
       tags: ['defaults']
     - role: geerlingguy.mac.homebrew
+      when: configure_homebrew
       tags: ['homebrew']
     - role: tkimball83.iterm2
       tags: ['iterm']
