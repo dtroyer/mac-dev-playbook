@@ -38,7 +38,6 @@
       when: configure_dock
       tags: ['dock']
     - role: rvm.ruby
-      tags: ['ruby']
       rvm1_rubies: "{{ ruby_versions }}"
       rvm1_install_flags: '--autolibs=enable --user-install'
       rvm1_user: "{{ ansible_env.USER }}"
