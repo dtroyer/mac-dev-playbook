@@ -11,6 +11,7 @@ configure_osx: false
 configure_sublime: false
 configure_iterm: true
 configure_ruby: true
+configure_homebrew: false
 
 dockitems_remove:
   - Contacts
