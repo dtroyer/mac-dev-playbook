@@ -322,6 +322,12 @@ iterm2_defaults:
   - name: FocusFollowsMouse
     type: bool
     value: true
+  - name: LoadPrefsFromCustomFolder
+    type: bool
+    value: false
+  - name: PrefsCustomFolder
+    type: string
+    value: "/Users/dtroyer/Cloud/etc/iTerm"
 
 rvm1_gpg_key_server: hkp://keys.gnupg.net
 ruby_versions:
