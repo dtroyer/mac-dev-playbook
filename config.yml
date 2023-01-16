@@ -120,7 +120,6 @@ homebrew_installed_packages:
   - mpc
   - nmap
   - openssl
-  # - packer
   - python@3.9
   - qemu
   - readline
@@ -131,7 +130,9 @@ homebrew_installed_packages:
   - tree
   - watch
   - wget
-  # Casks are installed as recipes now
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
   # - barrier
   # - clementine
   # - darktable
@@ -143,25 +144,22 @@ homebrew_installed_packages:
   # - handbrake
   # - inkscape
   - iterm2
-  # - keepassxc
+  - keepassxc
   # - moneydance
-  # - nextcloud
+  - nextcloud
   # - slack
-  # - sublime-text
+  - sublime-text
   # - thunderbird
   # - tunnelblick
   # - vagrant
   # - vagrant-manager
   # - virtualbox
   # - virtualbox-extension-pack
-  # - vlc
+  - vlc
 
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
-
-homebrew_cask_appdir: /Applications
-homebrew_cask_apps: []
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
