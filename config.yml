@@ -5,7 +5,7 @@ downloads: ~/.ansible-downloads/
 
 configure_dock: true
 configure_sudoers: false
-configure_dotfiles: false
+configure_dotfiles: true
 configure_terminal: false
 configure_osx: false
 configure_sublime: false
@@ -72,7 +72,7 @@ sudoers_custom_config: ''
 #   # Allow users in admin group to use sudo with no password.
 #   %admin ALL=(ALL) NOPASSWD: ALL
 
-dotfiles_repo: <set-me>
+dotfiles_repo: git.xr7.org:/srv/repo/home.git
 dotfiles_repo_accept_hostkey: yes
 dotfiles_repo_local_destination: ~/src/dotfiles
 dotfiles_files:
@@ -85,7 +85,9 @@ dotfiles_files:
   - .git-prompt
   - .screenrc
   - .ssh/config.d/common
-  # - .ssh/config.d/xr7
+  - .ssh/config.d/seriesumei
+  - .ssh/config.d/tomjs
+  - .ssh/config.d/xr7
   - .vimrc
   - bin/2mp3
   - bin/ddnsupdate
@@ -120,8 +122,7 @@ homebrew_installed_packages:
   - mpc
   - nmap
   - openssl
-  # - packer
-  - python@3.9
+  #- python@3.9
   - qemu
   - readline
   - rsync
@@ -143,18 +144,18 @@ homebrew_installed_packages:
   # - handbrake
   # - inkscape
   - iterm2
-  # - keepassxc
+  - keepassxc
   # - moneydance
   # - nextcloud
   # - slack
-  # - sublime-text
+  - sublime-text
   # - thunderbird
-  # - tunnelblick
+  - tunnelblick
   # - vagrant
   # - vagrant-manager
   # - virtualbox
   # - virtualbox-extension-pack
-  # - vlc
+  - vlc
 
 homebrew_taps:
   - homebrew/core
@@ -331,10 +332,10 @@ iterm2_defaults:
 
 rvm1_gpg_key_server: hkp://keys.gnupg.net
 ruby_versions:
-  - "2.5.1"
-  - "2.6.3"
-  - "2.7.1"
-  - "2.7.2"
+#  - "2.5.1"
+#  - "2.6.3"
+#  - "2.7.1"
+#  - "2.7.2"
   - "2.7.4"
   # - "3.0.0"
 
