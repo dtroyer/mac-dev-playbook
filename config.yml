@@ -59,12 +59,9 @@ dockitems_persist:
   - name: Photos
     path: "/Applications/Photos.app"
     pos: 10
-  - name: KeePassX
-    path: "/Applications/KeePassX.app"
+  - name: KeePassXC
+    path: "/Applications/KeePassXC.app"
     pos: 11
-  # - name: KeePassXC
-  #   path: "/Applications/KeePassXC.app"
-  #   pos: 11
   - name: System Preferences
     path: "/Applications/System Preferences.app"
     pos: 12
@@ -146,7 +143,6 @@ homebrew_installed_packages:
   # - handbrake
   # - inkscape
   - iterm2
-  # - keepassx
   # - keepassxc
   # - moneydance
   # - nextcloud
