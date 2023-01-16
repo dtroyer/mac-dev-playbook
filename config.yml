@@ -5,13 +5,13 @@ downloads: ~/.ansible-downloads/
 
 configure_dock: true
 configure_sudoers: false
-configure_dotfiles: false
+configure_dotfiles: true
 configure_terminal: false
 configure_osx: false
 configure_sublime: false
 configure_iterm: true
 configure_ruby: true
-configure_homebrew: false
+configure_homebrew: true
 
 dockitems_remove:
   - Contacts
@@ -72,7 +72,7 @@ sudoers_custom_config: ''
 #   # Allow users in admin group to use sudo with no password.
 #   %admin ALL=(ALL) NOPASSWD: ALL
 
-dotfiles_repo: <set-me>
+dotfiles_repo: git.xr7.org:/srv/repo/home.git
 dotfiles_repo_accept_hostkey: yes
 dotfiles_repo_local_destination: ~/src/dotfiles
 dotfiles_files:
@@ -137,7 +137,7 @@ homebrew_cask_apps:
   # - darktable
   - firefox
   - flux
-  # - gimp
+  - gimp
   # - github
   # - google-chrome
   # - handbrake
@@ -146,11 +146,11 @@ homebrew_cask_apps:
   - keepassxc
   # - moneydance
   - nextcloud
-  # - slack
+  - slack
   - strawberry
   - sublime-text
-  # - thunderbird
-  # - tunnelblick
+  - thunderbird
+  - tunnelblick
   # - vagrant
   # - vagrant-manager
   # - virtualbox
