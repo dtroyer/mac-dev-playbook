@@ -50,8 +50,8 @@ dockitems_persist:
   - name: Sublime Text
     path: "/Applications/Sublime Text.app"
     pos: 7
-  - name: clementine
-    path: "/Applications/clementine.app"
+  - name: strawberry
+    path: "/Applications/strawberry.app"
     pos: 8
   - name: Music
     path: "/Applications/Music.app"
@@ -134,7 +134,6 @@ homebrew_installed_packages:
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   # - barrier
-  # - clementine
   # - darktable
   - firefox
   - flux
@@ -148,6 +147,7 @@ homebrew_cask_apps:
   # - moneydance
   - nextcloud
   # - slack
+  - strawberry
   - sublime-text
   # - thunderbird
   # - tunnelblick
