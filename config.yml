@@ -140,8 +140,6 @@ homebrew_installed_packages:
   - watch
   - wget
 
-homebrew_cask_appdir: /Applications
-homebrew_cask_apps:
   # - barrier
   # - darktable
   - firefox
@@ -165,6 +163,9 @@ homebrew_cask_apps:
   # - virtualbox
   # - virtualbox-extension-pack
   - vlc
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps: []
 
 homebrew_taps:
   - homebrew/core
