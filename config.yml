@@ -14,6 +14,7 @@ configure_ruby: true
 configure_homebrew: true
 
 dockitems_remove:
+  - Calendar
   - Contacts
   - FaceTime
   - iBooks
@@ -21,8 +22,10 @@ dockitems_remove:
   - Mail
   - Maps
   - Messages
+  - Music
   - News
   - Notes
+  - Photos
   - Podcasts
   - Reminders
   - Siri
@@ -44,8 +47,8 @@ dockitems_persist:
   - name: Thunderbird
     path: "/Applications/Thunderbird.app"
     pos: 5
-  - name: Calendar
-    path: "/Applications/Calendar.app"
+  - name: Slack
+    path: "/Applications/Slack.app"
     pos: 6
   - name: Sublime Text
     path: "/Applications/Sublime Text.app"
@@ -53,12 +56,6 @@ dockitems_persist:
   - name: strawberry
     path: "/Applications/strawberry.app"
     pos: 8
-  - name: Music
-    path: "/Applications/Music.app"
-    pos: 9
-  - name: Photos
-    path: "/Applications/Photos.app"
-    pos: 10
   - name: KeePassXC
     path: "/Applications/KeePassXC.app"
     pos: 11
@@ -208,7 +205,7 @@ Dock_PersistentOthers:                           # Either a plain path string or
   - /Applications
   # - { path: "~/Downloads", type: directory, arrange: 2}
   # - { path: "/Applications/Firefox.app", type: file, arrange: 3}
-Dock_TileSize: 40                                # Dock size
+Dock_TileSize: 32                                # Dock size
 Dock_Magnification: no                           # Dock magnification
 Dock_LargeSize: 128                              # Icon size of magnified Dock items
 Dock_Orientation: "left"                         # Dock orientation: left, bottom, right
