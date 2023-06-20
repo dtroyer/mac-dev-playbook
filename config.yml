@@ -76,6 +76,8 @@ dotfiles_files:
   - .aliases
   - .bash_profile
   - .bashrc
+  - .config/gh/config.yml
+  - .config/gh/hosts.yml
   - .config/git/ignore
   - .gitconfig
   - .gitignore
