@@ -300,6 +300,10 @@ Trackpad_Clicking: yes                           # Tap to Click
 #Trackpad_ForceClickAndHapticFeedback: no          # Force Click and haptic feedback
 Trackpad_ScrollDirectionNatural: no                # Enable Natural Scroll Direction (it's a macOS default)
 
+Configure_WindowManager: yes                     # Enable WindowManager configuration
+WindowManager_ClickToShowDesktop: no             # Enable click on wallpaper to show desktop
+WindowManager_StageManager: no                   # Enable StageManager
+
 iterm2_defaults:
   # General -> Closing
   - name: PromptOnQuit

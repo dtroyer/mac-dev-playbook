@@ -1,0 +1,13 @@
+---
+- block:
+
+  - name: "WindowManager"
+    osx_defaults: { domain: 'com.apple.WindowManager', key: "{{ item.key }}", type: "{{ item.type }}", value: "{{ item.value }}" }
+    loop:
+      - { key: 'EnableStandardClickToShowDesktop', type: 'bool', value: '{{ WindowManager_ClickToShowDesktop }}'}
+      - { key: 'GloballyEnabled', type: 'bool', value: '{{ WindowManager_StageManager }}'}
+    when: item.value | string | length > 0
+  # Privilege escalation to `target_user_id` is only required for inner steps when
+  # the `target_user_id` doesn't match the `ansible_user_id`
+  become: "{{ target_user_id != ansible_user_id }}"
+  become_user: "{{ target_user_id }}"
